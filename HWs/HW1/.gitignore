@@ -1,0 +1,40 @@
+# קבצים ותיקיות של IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# קבצי קומפילציה של Java
+*.class
+
+# תיקיות קומפילציה
+out/
+target/
+bin/
+
+# קבצים זמניים וקבצי מערכת
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# תלותים שהורדו (Maven או Gradle)
+.mvn/
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!mvn/wrapper/maven-wrapper.jar
+
+# תיקיות של Maven
+target/
+dependency-reduced-pom.xml
+
+# תיקיות של Gradle
+.gradle/
+build/
+
+# קבצים של מערכת ההפעלה
+*.DS_Store
+*.vscode/
+*.idea/
