@@ -11,7 +11,7 @@ public class Main {
         double product = intNumber * floatNumber1 * floatNumber2;
 
         // Compute the average of the three numbers
-        double average = (intNumber + floatNumber1 + floatNumber2) / 3;
+        double average = (intNumber + floatNumber1 + floatNumber2) / 3.0;
 
         // Find the largest number among the three
         double maxNumber = Math.max(intNumber, Math.max(floatNumber1, floatNumber2));
