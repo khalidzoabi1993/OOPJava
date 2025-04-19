@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class tergol2part2 {
     public static void main(String[] args) {
+//        page17:
 //        Scanner input = new Scanner(System.in);
 //
 //        System.out.print("Enter a 5-digit number: ");
@@ -61,6 +62,7 @@ public class tergol2part2 {
 //
 //        input.close();
 
+        // page 19
         // arr and string
         Scanner input = new Scanner(System.in);
 
