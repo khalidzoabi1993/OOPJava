@@ -1,77 +1,85 @@
 
 public class Course {
-
+	
 	private String courseName;
-
 	private String courseId;
+	private int maxNumberStudentInCourse;
+	private String [] arrStudents;
+	private int studentsActive=0;
 
-	public int maxNumberStudentInCourse;
 
-	private String[] arrStudent;
-
-	private int studentCounter = 0;
-
-	private boolean isValid = true;
-
-	public int getStudentCounter() {
-		return studentCounter;
+	
+	public Course(String courseName, String courseId, int maxNumberStudentInCourse)
+	{
+		setCourseName(courseName);
+		setCourseId(courseId);
+		setMaxNumbersOfStudents(maxNumberStudentInCourse);
+		setArrOfStudents();
+		
+		
+		
 	}
-
-	public void setStudentCounter(int newStudentCounter) {
-		this.studentCounter = newStudentCounter;
+	public String getCourseName()
+	{
+		return courseName;
 	}
-
-	public int getmaxNumberStudentInCourse() {
+	public String getCourseId()
+	{
+		return courseId;
+	}
+	public int getMaxNumberOfStudents()
+	{
 		return this.maxNumberStudentInCourse;
 	}
-
-	public Course(String courseName, String courseId, int maxNumberStudentInCourse) {
-		this.courseName = courseName;
-		this.courseId = courseId;
-		setMaxNumberStudentInCourse(maxNumberStudentInCourse);
-		arrStudent = new String[maxNumberStudentInCourse];
-
+	public String [] getArrStudents()
+	{
+		return this.arrStudents;
 	}
-
-	public void setMaxNumberStudentInCourse(int maxNumberStudentInCourse) {
-		if (Math.sqrt(maxNumberStudentInCourse) > 2) {
-			this.maxNumberStudentInCourse = maxNumberStudentInCourse;
-		} else {
-			System.out.println("The value is not Valid");
-			// Valid רק המידה והערך גדול מ -5 אז הוא יהיה 
-			isValid = false;
-
+	public void setCourseName(String newCourseName)
+	{
+		this.courseName = newCourseName;
+	}
+	public void setCourseId(String newCourseId)
+	{
+		this.courseId = newCourseId;
+	}
+	public void setMaxNumbersOfStudents(int newMaxNumbersOfStudents)
+	{
+		this.maxNumberStudentInCourse = newMaxNumbersOfStudents;
+	}
+	public void setArrOfStudents()
+	{
+		arrStudents = new String[this.getMaxNumberOfStudents()];
+	}
+	
+	public void addStudentToCoure(Student s1)
+	{
+		boolean isStudentExist = false;
+		
+		if(studentsActive==this.getArrStudents().length)
+		{
+			System.out.print("Arr Students is Full\n");
+			
 		}
-	}
-
-	public void addStudentToCoure(Student s) {
-		boolean isExist = false;
-		if (isValid) {
-			for (int i = 0; i < arrStudent.length; i++) {
-				if (arrStudent[i] != null) {
-
-					if (arrStudent[i].equals(s.getStudentId())) {
-						System.out.println("The Student with the ID " + arrStudent[i] + " is allready Exist");
-						isExist = true;
-						break;
-					}
-				} else {
+		else
+		{
+			for(int i = 0 ; i < this.studentsActive ; i++)
+			{
+				if(this.arrStudents[i].equals(s1.getStudentId()))
+				{
+					System.out.print("This student is allready Exist\n");
+					isStudentExist= true;
 					break;
 				}
 			}
-			if (!isExist) {
-				if (this.getStudentCounter() < this.getmaxNumberStudentInCourse()) {
-					arrStudent[this.getStudentCounter()] = s.getStudentId();
-					System.out.println("The Student with ID " + s.getStudentId() + " is Added");
-					this.setStudentCounter(this.getStudentCounter() + 1);
-				} else {
-					System.out.println(
-							"The student quota for this course has been filled. No additional students can be added.");
-
-				}
+			if(!isStudentExist)
+			{
+				this.arrStudents[studentsActive]= s1.getStudentId();
+				studentsActive++;
 			}
-
 		}
 	}
+	
+	
 
 }

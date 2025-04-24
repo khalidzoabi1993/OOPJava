@@ -3,41 +3,41 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Student s1 = new Student("david", "123");
-		Student s2 = new Student("Yos", "456");
-		Student s3 = new Student("Meni", "789");
-		Student s4 = new Student("Avi", "983");
-		Student s5 = new Student("Rony", "565");
-		Student s6 = new Student("Sami", "565");
-		Student s7 = new Student("Dina", "987");
-
-
-		System.out.println("The Student name  is" +  s1.getStudentName() + " And the Id of the Student is " + s1.getStudentId());
-		System.out.println("The Student name  is" +  s2.getStudentName() + " And the Id of the Student is " + s2.getStudentId());
-		System.out.println("The Student name  is" +  s3.getStudentName() + " And the Id of the Student is " + s3.getStudentId());
-		System.out.println("The Student name  is" +  s4.getStudentName() + " And the Id of the Student is " + s4.getStudentId());
-		System.out.println("The Student name  is" +  s5.getStudentName() + " And the Id of the Student is " + s5.getStudentId());
-		System.out.println("The Student name  is" +  s6.getStudentName() + " And the Id of the Student is " + s6.getStudentId());
-
-	
-		Course c = new Course("OOP", "34587878",5);
-		c.addStudentToCoure(s1);
-		c.addStudentToCoure(s2);
-		c.addStudentToCoure(s3);
-		c.addStudentToCoure(s4);
-		c.addStudentToCoure(s5);
-		c.addStudentToCoure(s6);
-		c.addStudentToCoure(s7);
-
-
-
-
-
-
-
+		Complex c1= new Complex(5,7);
+		Complex c2 = new Complex(3,1);
+		c1.printNumber() ;
+		System.out.print('\n');
+		c2.printNumber();
+		System.out.print('\n');
+		System.out.print("The abs of the complex number of c1 is " + c1.computeAbsNumber());
+		
+		Account a1 = new Account("hezi","8594354", 400);
+		a1.deposit(-30);
+		a1.deposit(100);
+		a1.printAccount();
+		a1.withDrawl(-50);
+		a1.withDrawl(1000);
+		a1.printAccount();
+		
+		Student s1 = new Student("A", "35841223");
+		Student s2 = new Student("B", "32876651");
+		Student s3 = new Student("C", "23447584");
+		Student s4 = new Student("D", "24546346");
+		Student s5 = new Student("E", "24544545");
+		Student s6 = new Student("E", "43546655");
+		
+		Course a = new Course("Java","5454",5);
+		a.addStudentToCoure(s1);
+		a.addStudentToCoure(s2);
+		a.addStudentToCoure(s3);
+		a.addStudentToCoure(s3);
+		a.addStudentToCoure(s5);
+		a.addStudentToCoure(s5);
 		
 		
-
+		
+		
+		
 	}
 
 }

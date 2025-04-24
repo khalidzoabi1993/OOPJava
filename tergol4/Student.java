@@ -1,41 +1,39 @@
 
 public class Student {
-	
 	private String studentName;
-	
 	private String studentId;
-		
+	
 	public Student(String studentName, String studentId)
 	{
 		this.studentName = studentName;
 		this.studentId = studentId;
-		
 	}
 	public Student(String studentName)
 	{
 		this.studentName = studentName;
-		this.studentId = "12345678";  // Default ID
+		this.studentId="12345678";
+		
 	}
 	public String getStudentName()
 	{
-		return this.studentName;
+		return studentName;
 	}
 	public String getStudentId()
 	{
 		return this.studentId;
 	}
-	public void seStudentName(String newStudent)
+	public void setStudentName(String newStudentName)
 	{
-		this.studentName = newStudent;
+		this.studentName = newStudentName;
 	}
-	public void seStudentId(String newStudentId)
+	public void setStudentId(String newStudentId)
 	{
 		this.studentId = newStudentId;
 	}
-	public String toString()
+	public void printDetails()
 	{
-		return "The student name is " + this.getStudentName() + " The studnt ID is " + this.getStudentId();
+		System.out.print("The name of the student is " + this.getStudentName() + " The studentId is " + getStudentId());
 	}
 	
-	
+
 }
