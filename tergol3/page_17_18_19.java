@@ -31,7 +31,7 @@ public class page_17_18_19 {
 //
 //        input.close();
 
-        //2
+//        //2
 //        Scanner input = new Scanner(System.in);
 //
 //        System.out.print("Enter a positive number: ");

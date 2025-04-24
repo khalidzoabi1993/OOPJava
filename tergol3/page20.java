@@ -21,25 +21,25 @@ public class page20 {
 //        System.out.println();
 
         // Q2
-//        int[] original = {5, 8, 3, 12, 7, 9, 4, 11, 6, 2};
-//
-//        int a = 2;
-//        int b = 6;
-//
-//        int size = b - a + 1;
-//        int[] copy = new int[size];
-//
-//        int index = 0;
-//        for (int i = a; i <= b; i++) {
-//            copy[index] = original[i];
-//            index++;
-//        }
-//
-//        System.out.println("Copied values:");
-//        for (int i = 0; i < copy.length; i++) {
-//            System.out.print(copy[i] + " ");
-//        }
-//        System.out.println();
+        int[] original = {5, 8, 3, 12, 7, 9, 4, 11, 6, 2};
+
+        int a = 2;
+        int b = 6;
+
+        int size = b - a + 1;
+        int[] copy = new int[size];
+
+        int index = 0;
+        for (int i = a; i <= b; i++) {
+            copy[index] = original[i];
+            index++;
+        }
+
+        System.out.println("Copied values:");
+        for (int i = 0; i < copy.length; i++) {
+            System.out.print(copy[i] + " ");
+        }
+        System.out.println();
 
 
         // Q3
@@ -57,17 +57,17 @@ public class page20 {
 //        System.out.println();
 
         // Q4
-        int[] array = { 5, 3, 9, 1, 15 };
-        int max = array[0];
-
-        System.out.println("Numbers satisfying the condition:");
-        for (int i = 0; i < array.length; i++) {
-            if (i > 1) {
-                if (array[i] >= max && array[i] % array[i - 1] == 0) {
-                    System.out.print(array[i] + " ");
-                    max = array[i];
-                }
-            }
-        }
+//        int[] array = { 5, 3, 9, 1, 15 };
+//        int max = array[0];
+//
+//        System.out.println("Numbers satisfying the condition:");
+//        for (int i = 0; i < array.length; i++) {
+//            if (i > 1) {
+//                if (array[i] >= max && array[i] % array[i - 1] == 0) {
+//                    System.out.print(array[i] + " ");
+//                    max = array[i];
+//                }
+//            }
+//        }
     }
 }
