@@ -3,7 +3,10 @@ public class Complex {
 	
 	private double real;
 	private double img;
-	
+	public Complex() {
+		this.real = 0;
+		this.img = 0;
+	}
 	public Complex(double real, double img)
 	{
 		setReal(real);

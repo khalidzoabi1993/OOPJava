@@ -4,19 +4,18 @@ public class Course {
 	private String courseName;
 	private String courseId;
 	private int maxNumberStudentInCourse;
-	private String [] arrStudents;
+	private String[] arrStudents;
 	private int studentsActive=0;
 
 
-	
+
 	public Course(String courseName, String courseId, int maxNumberStudentInCourse)
 	{
-		setCourseName(courseName);
-		setCourseId(courseId);
-		setMaxNumbersOfStudents(maxNumberStudentInCourse);
-		setArrOfStudents();
-		
-		
+		this.courseName = courseName;
+		this.courseId = courseId;
+		this.maxNumberStudentInCourse = maxNumberStudentInCourse;
+		this.arrStudents = new String[maxNumberStudentInCourse];
+
 		
 	}
 	public String getCourseName()
@@ -52,7 +51,7 @@ public class Course {
 		arrStudents = new String[this.getMaxNumberOfStudents()];
 	}
 	
-	public void addStudentToCoure(Student s1)
+	public void addStudentToCoure(Student s)
 	{
 		boolean isStudentExist = false;
 		
@@ -65,16 +64,16 @@ public class Course {
 		{
 			for(int i = 0 ; i < this.studentsActive ; i++)
 			{
-				if(this.arrStudents[i].equals(s1.getStudentId()))
+				if(this.arrStudents[i].equals(s.getStudentId()))
 				{
-					System.out.print("This student is allready Exist\n");
+					System.out.print("This student is already Exist\n");
 					isStudentExist= true;
 					break;
 				}
 			}
 			if(!isStudentExist)
 			{
-				this.arrStudents[studentsActive]= s1.getStudentId();
+				this.arrStudents[studentsActive]= s.getStudentId();
 				studentsActive++;
 			}
 		}
