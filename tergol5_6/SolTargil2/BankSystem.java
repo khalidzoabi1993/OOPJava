@@ -8,16 +8,24 @@ public class BankSystem {
     }
 
     public void addBank(Bank bank) {
+        // Check if the bank already exists
+        for (int i = 0; i < banks.size(); i++) {
+            Bank existingBank = banks.get(i);
+            if (existingBank.getBankName().equals(bank.getBankName())) {
+                System.out.println("Bank already exists: " + bank.getBankName());
+                return;
+            }
+        }
         banks.add(bank);
     }
-    public Bank getBankWithHighestTotalBalance() {
+    public Bank getBankWithMaxBalance() {
         if (banks.isEmpty()) {
             return null;
         }
         Bank highestBank = banks.get(0);
 
         for (int i = 0; i < banks.size(); i++) {
-            if (banks.get(i).getBankTotalBalance() > highestBank.getBankTotalBalance()) {
+            if (banks.get(i).getSumAllAccounts() > highestBank.getSumAllAccounts()) {
                 highestBank = banks.get(i);
             }
         }
