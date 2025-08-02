@@ -10,8 +10,7 @@ public class BankSystem {
     public void addBank(Bank bank) {
         // Check if the bank already exists
         for (int i = 0; i < banks.size(); i++) {
-            Bank existingBank = banks.get(i);
-            if (existingBank.getBankName().equals(bank.getBankName())) {
+            if (banks.get(i).getBankName().equals(bank.getBankName())) {
                 System.out.println("Bank already exists: " + bank.getBankName());
                 return;
             }

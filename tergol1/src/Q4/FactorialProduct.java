@@ -5,12 +5,17 @@ public class FactorialProduct {
         //Q4.2 SOL
         int a = 5, b = 7;
 
-        // Compute factorial for both numbers
-        long factorialA = factorial(a);
-        long factorialB = factorial(b);
+        int resultA = 1;
+        int resultB = 1;
+        for (int i = 1; i <= a; i++) {
+            resultA *= i;
+        }
+        for (int i = 1; i <= b; i++) {
+            resultB *= i;
+        }
 
         // Compute and print the product
-        long product = factorialA * factorialB;
+        int product = resultA * resultB;
         System.out.println(a + "! * " + b + "! = " + product);
     }
 

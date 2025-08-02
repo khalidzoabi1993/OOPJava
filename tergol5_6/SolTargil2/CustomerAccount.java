@@ -19,4 +19,22 @@ public class CustomerAccount {
 		return this.customerName;
 	}
 
+	public void setBalance(double balance)
+	{
+		this.balance = balance;
+	}
+	public void setCustomerName(String customerName)
+	{
+		this.customerName = customerName;
+	}
+
+	@Override
+	public String toString()
+	{
+		return "CustomerAccount{" +
+				"customerName='" + customerName + '\'' +
+				", balance=" + balance +
+				'}';
+	}
+
 }

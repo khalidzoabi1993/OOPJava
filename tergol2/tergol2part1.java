@@ -1,7 +1,22 @@
 import java.util.Scanner;
 
 public class tergol2part1 {
+    public static void q1(){
+
+        // Print numbers between 1 and 100 divisible by 7
+        for (int i = 1; i <= 100; i += 7) {
+            System.out.println(i);
+        }
+        // with if statement
+        for (int i = 1; i <= 100; i++) {
+            if (i % 7 == 0) {
+                System.out.println(i);
+            }
+        }
+    }
     public static void main(String[] args) {
+        q1();
+        //q1
 //        // Print numbers between 1 and 100 divisible by 7
 //        for (int i = 1; i <= 100; i += 7) {
 //            System.out.println(i);
@@ -12,6 +27,7 @@ public class tergol2part1 {
 //                System.out.println(i);
 //            }
 //        }
+        //q2
 //        // Read 20 integers and print the average of even numbers
 //        Scanner scanner = new Scanner(System.in);
 //        int sum = 0;
@@ -26,7 +42,7 @@ public class tergol2part1 {
 //        }
 //        double average = (double) sum / count;
 //        System.out.println("Average of even numbers: " + average);
-
+//q3
         // Read integers until the first negative number (which is ignored)
 //        Scanner scanner = new Scanner(System.in);
 //        int sum = 0;
@@ -45,6 +61,8 @@ public class tergol2part1 {
 //        double average = (double) sum / count;
 //        System.out.println("Average of even numbers: " + average);
 //        scanner.close();
+
+//q4
 
 //        // 4 - After each number, ask the user if they want to continue
 //        Scanner input = new Scanner(System.in);
@@ -72,6 +90,7 @@ public class tergol2part1 {
 //            System.out.println("No even numbers entered.");
 //
 //        input.close();
+        //q5
         // 5 -Print day name based on number from 1 to 7
 //        Scanner input = new Scanner(System.in);
 //
@@ -97,53 +116,59 @@ public class tergol2part1 {
 //
 //        input.close();
 //        //6) Guess the number game with hints (too high / too low)
-//        Scanner input = new Scanner(System.in);
-//
-//        System.out.print("Player 1, enter a number to be guessed: ");
-//        int secret = input.nextInt();
-//
-//        System.out.println("Now Player 2 must guess the number!");
-//
-//        int guess = -1; // any value not equal to secret
-//        while (guess != secret) {
-//            System.out.print("Enter your guess: ");
-//            guess = input.nextInt();
-//
-//            if (guess < secret)
-//                System.out.println("Too small. Try again.");
-//            else if (guess > secret)
-//                System.out.println("Too big. Try again.");
-//            else
-//                System.out.println("Correct! You guessed the number.");
-//        }
-//
-//        input.close();
 
-        //7) Perfect number checker
+//q6
+
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter a number to check if it's perfect: ");
-        int num = input.nextInt();
+        System.out.print("Player 1, random number : ");
 
-        int sum = 0;
-        System.out.print("Divisors: ");
+        int secret = (int)(Math.random() * 101);  // 0 to 100
 
-        // Find and print divisors
-        for (int i = 1; i < num; i++) {
-            if (num % i == 0) {
-                System.out.print(i + " ");
-                sum += i;
-            }
+        System.out.println("Now Player 2 must guess the number!");
+
+        int guess = -1; // any value not equal to secret
+        while (guess != secret) {
+            System.out.print("Enter your guess: ");
+            guess = input.nextInt();
+
+            if (guess < secret)
+                System.out.println("Too small. Try again.");
+            else if (guess > secret)
+                System.out.println("Too big. Try again.");
+            else
+                System.out.println("Correct! You guessed the number.");
         }
 
-        System.out.println(); // move to next line
-        System.out.println("Sum of divisors: " + sum);
-
-        if (sum == num)
-            System.out.println(num + " is a perfect number.");
-        else
-            System.out.println(num + " is not a perfect number.");
-
         input.close();
+
+        //q7
+
+//        //7) Perfect number checker
+//        Scanner input = new Scanner(System.in);
+//
+//        System.out.print("Enter a number to check if it's perfect: ");
+//        int num = input.nextInt();
+//
+//        int sum = 0;
+//        System.out.print("Divisors: ");
+//
+//        // Find and print divisors
+//        for (int i = 1; i < num; i++) {
+//            if (num % i == 0) {
+//                System.out.print(i + " ");
+//                sum += i;
+//            }
+//        }
+//
+//        System.out.println(); // move to next line
+//        System.out.println("Sum of divisors: " + sum);
+//
+//        if (sum == num)
+//            System.out.println(num + " is a perfect number.");
+//        else
+//            System.out.println(num + " is not a perfect number.");
+//
+//        input.close();
     }
 }

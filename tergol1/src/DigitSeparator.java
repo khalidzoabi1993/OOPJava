@@ -7,7 +7,7 @@ public class DigitSeparator {
 
         // Get a 6-digit number from the user
         System.out.print("Enter a 6-digit integer: ");
-        int number = scanner.nextInt();
+        int number = 345673;
 
         // Convert the number to a string for easy digit extraction
         String numStr = Integer.toString(number);

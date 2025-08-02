@@ -2,7 +2,25 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        // Define three variables: one integer and two floating-point numbers
+
+        int age = 31;
+        String name = "John Doe";
+        double height = 1.75;
+        boolean isStudent = false;
+        System.out.println("Name: " + name + ", Age: " + age + ", Height: " + height + ", Is Student: " + isStudent);
+
+
+        int grade = -4;
+        if(grade > 0) {
+            System.out.println("Grade is positive.");
+        } else if (grade < 0) {
+            System.out.println("Grade is not positive.");
+        }
+        else {
+            System.out.println("Grade is zero.");
+        }
+
+//         Define three variables: one integer and two floating-point numbers
         int intNumber = 5;
         double floatNumber1 = 4.2;
         double floatNumber2 = 3.8;
@@ -24,5 +42,7 @@ public class Main {
         System.out.println("Average of the three numbers: " + average);
         System.out.println("Largest number among the three: " + maxNumber);
         System.out.println("Remainder of division between two floating-point numbers: " + remainder);
+
+
     }
 }
